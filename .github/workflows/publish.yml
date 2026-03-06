@@ -43,10 +43,21 @@ jobs:
         id: install-sbt
         uses: sbt/setup-sbt@v1
 
+      # sbt-ci-release decodes PGP_SECRET via `echo $PGP_SECRET | base64 --decode`.
+      # If the secret was encoded without `-w0` (no line-wrap), the value stored
+      # in GitHub Secrets will contain embedded newlines, which corrupts the
+      # decode and produces: "secret key ring doesn't start with secret key tag".
+      # Normalising to a single-line base64 string here fixes that regardless of
+      # how the secret was originally generated.
+      - name: Normalise PGP secret
+        run: echo "PGP_SECRET=$(echo "$PGP_SECRET" | tr -d '\r\n')" >> "$GITHUB_ENV"
+        env:
+          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+
       - name: Publish
         run: sbt ci-release
         env:
           PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
-          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+          PGP_SECRET: ${{ env.PGP_SECRET }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
