@@ -24,6 +24,14 @@ ThisBuild / scmInfo := Some(ScmInfo(
 ThisBuild / licenses :=
   List("MIT License" -> url("https://opensource.org/licenses/MIT"))
 
+// The developers who maintain this library (required by Maven Central).
+ThisBuild / developers := List(Developer(
+  id    = (ThisBuild / organization).value,
+  name  = (ThisBuild / organizationName).value,
+  email = "",
+  url   = (ThisBuild / organizationHomepage).value.get,
+))
+
 ThisBuild / scalaVersion := "3.8.2"
 
 // Target the Sonatype Central Portal (https://central.sonatype.com).
