@@ -2,30 +2,27 @@ import IdeSettings.packagePrefix
 import sbt._
 import sbt.Keys._
 
+// Basic details about this library:
 ThisBuild / name        := "scala-library-template"
 ThisBuild / description := "A reusable template for Scala libraries."
 
 ThisBuild / homepage :=
   Some(url("https://github.com/SgtSwagrid/scala-library-template"))
 
-ThisBuild / organization         := "com.example"
+// The organisation who maintains this library.
+ThisBuild / organization         := "org.example"
 ThisBuild / organizationName     := "Example"
 ThisBuild / organizationHomepage := Some(url("https://example.com"))
 
+// The URL for the GitHub repository of this library.
 ThisBuild / scmInfo := Some(ScmInfo(
   url("https://github.com/SgtSwagrid/scala-library-template"),
   "scm:git@github.com:SgtSwagrid/scala-library-template.git",
 ))
 
-ThisBuild / developers := List(Developer(
-  id = "example",
-  name = "Example Developer",
-  email = "dev@example.com",
-  url = url("https://github.com/example"),
-))
-
+// The licence under which this library is released.
 ThisBuild / licenses :=
-  List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
+  List("MIT License" -> url("https://opensource.org/licenses/MIT"))
 
 // Target the Sonatype Central Portal (https://central.sonatype.com).
 // Set SONATYPE_USERNAME and SONATYPE_PASSWORD as GitHub secrets.

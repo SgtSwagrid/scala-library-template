@@ -13,21 +13,17 @@ concurrency:
 jobs:
 
   # Publish artefacts to Maven Central.
-  #
-  # Triggered on:
-  #   • pushes to `main`  → publishes a snapshot.
-  #   • version tags (v*) → publishes a full release.
+  # Triggered by version tags (v*) to publish a full release.
   #
   # Required repository secrets:
-  #   PGP_SECRET          – base64-encoded GPG private key
-  #   PGP_PASSPHRASE      – passphrase for the GPG key
-  #   SONATYPE_USERNAME   – Sonatype Central Portal token user
-  #   SONATYPE_PASSWORD   – Sonatype Central Portal token password
+  #   PGP_SECRET          – base64-encoded GPG private key.
+  #   PGP_PASSPHRASE      – passphrase for the GPG key.
+  #   SONATYPE_USERNAME   – Sonatype Central Portal token user.
+  #   SONATYPE_PASSWORD   – Sonatype Central Portal token password.
   publish:
     name: Publish to Maven Central
     if: >
-      github.event_name != 'pull_request' &&
-      (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+      github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
 
     steps:

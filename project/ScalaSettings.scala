@@ -2,7 +2,7 @@ import sbt.*
 import sbt.Keys.*
 
 /** Library-wide Scala and Java compiler flags. */
-object CompilerSettings extends AutoPlugin {
+object ScalaSettings extends AutoPlugin {
 
   override def trigger = allRequirements
 
