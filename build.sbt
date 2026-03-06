@@ -24,6 +24,8 @@ ThisBuild / scmInfo := Some(ScmInfo(
 ThisBuild / licenses :=
   List("MIT License" -> url("https://opensource.org/licenses/MIT"))
 
+ThisBuild / scalaVersion := "3.8.2"
+
 // Target the Sonatype Central Portal (https://central.sonatype.com).
 // Set SONATYPE_USERNAME and SONATYPE_PASSWORD as GitHub secrets.
 ThisBuild / sonatypeCredentialHost := "central.sonatype.com"
