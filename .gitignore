@@ -20,6 +20,7 @@ metals.sbt
 
 # Agents:
 .claude/settings.local.json
+.claude/worktrees/
 .playwright-mcp/
 
 # IDEs:
