@@ -1,17 +1,6 @@
 # scala-library-template
 
-A GitHub template repository for creating Scala libraries that are automatically published to [Maven Central](https://central.sonatype.com/).
-
-## What's included
-
-| File                                            | Purpose                                          |
-|-------------------------------------------------|--------------------------------------------------|
-| `build.sbt`                                     | Library metadata + publishing settings           |
-| `project/plugins.sbt`                           | sbt-ci-release, sbt-scalafmt                     |
-| `.github/workflows/ci.yml`                      | CI (format check + tests) + automated publishing |
-| `.scalafmt.conf`                                | Scalafmt code style rules                        |
-| `src/main/scala/com/example/Example.scala`      | Sample source                                    |
-| `src/test/scala/com/example/ExampleSuite.scala` | Sample MUnit test                                |
+A reusable template for Scala libraries, with automatic [Maven Central](https://central.sonatype.com/) deployment.
 
 ## Using this template
 
@@ -89,35 +78,3 @@ git push origin v1.2.3
 ```
 
 The CI pipeline will run tests, then publish and auto-promote the artifact to Maven Central.
-
-## Local development
-
-```bash
-# Compile
-sbt compile
-
-# Run tests
-sbt test
-
-# Format all source files
-sbt scalafmtAll
-
-# Check formatting (what CI runs)
-sbt scalafmtCheckAll scalafmtSbtCheck
-
-# Publish locally (for testing)
-sbt publishLocal
-```
-
-## Versioning
-
-Versions are derived automatically from git tags by
-[sbt-dynver](https://github.com/sbt/sbt-dynver):
-
-- On a tagged commit `v1.2.3` → version `1.2.3`
-- On a commit after a tag → version `1.2.3+4-abcdef01` (SNAPSHOT-like)
-- On the default branch with no tag → version `0.1.0-SNAPSHOT`
-
-## License
-
-Apache-2.0 — see [LICENSE](LICENSE).
