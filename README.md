@@ -60,16 +60,11 @@ Add the following secrets to your repository on GitHub
 
 ### 6. Publishing workflow
 
-Releases are automatically published to Maven Central when you push a tag with a version formatted as `v*` (e.g. `v1.2.3`).
+Releases are automatically published to Maven Central when you create a new release on GitHub.
 
 #### Example:
 
-To release version `1.2.3`,
-
-```bash
-git tag v1.2.3
-git push origin v1.2.3
-```
+To release version `1.2.3`, go to **Releases → Draft a new release** on GitHub, create a tag `v1.2.3`, and click **Publish release**.
 
 ## See also
 
