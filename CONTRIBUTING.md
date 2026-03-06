@@ -2,11 +2,11 @@
 
 ## Workflow
 
-1. Clone the repository: `git clone https://github.com/SgtSwagrid/scala-website-template.git`.
+1. Clone the repository: `git clone https://github.com/SgtSwagrid/scala-library-template.git`.
 2. Create a feature branch: `git checkout -b feature_<description>`.
 3. Make your changes and format: `sbt scalafmtAll`
 4. Commit (`git add -A` then `git commit -m "<description>"`) and push (`git push`).
-5. Create a pull request to `main`, with the title formatted as `[<type>][<scope>] <Description>`, e.g. `[fix][render] Solved inverted colours.`
+5. Create a pull request to `main`, with the title given as `[<type>][<scope>] <Description>`, e.g. `[fix][render] Solved inverted colours.`
 6. Before merging, the code must pass the build test (defined in [ci.yml](./.github/workflows/ci.yml)).
 
 ## Code Style
@@ -34,8 +34,8 @@ A well-chosen abstraction (like `Vec` or `AffineBijection` or `Signal`) makes th
 
 This project follows simple [trunk-based](https://trunkbaseddevelopment.com/) development.
 All development happens on short-lived feature branches, which are merged into `main` when complete.
-All updates to `main` are automatically published as snapshots.
-When a commit is tagged with a version number (e.g. `v1.2.3`), it is automatically published as a release.
+Release branches are split from `main`.
+Releases are automatically published when [tagged](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags) with a version `v*`.
 
 ## Contact
 

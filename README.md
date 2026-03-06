@@ -8,77 +8,69 @@ A reusable template for Scala libraries, with automatic [Maven Central](https://
 
 Click '**Use this template**' on GitHub, and follow the instructions to create a new repository.
 
-### 2. Update `build.sbt`
+### 2. Update [build.sbt](build.sbt)
 
-Replace every `example` placeholder:
+Replace every `example` placeholder with real values for your project.
+In particular, make sure to at least update the following fields:
 
-```scala
-ThisBuild / organization := "com.yourorg"         // Maven group ID
-ThisBuild / organizationName := "Your Org"
-ThisBuild / organizationHomepage := Some(url("https://yourorg.com"))
+- `ThisBuild / name`: The name of your library.
+- `ThisBuild / description`: A short description of your library.
+- `ThisBuild / organization`: The namespace for your library, which should match your namespace on Maven Central (see step 3 below).
+- `ThisBuild / oranizationName`: Your name or your organisation's name.
+- `ThisBuild / organizationHomepage`: A URL for your organisation (e.g. your personal website).
+- `ThisBuild / scmInfo`: The URL of your new GitHub repository.
 
-ThisBuild / scmInfo := Some(ScmInfo(
-  url("https://github.com/yourorg/your-library"),
-  "scm:git@github.com:yourorg/your-library.git",
-))
+### 3. Set up your Maven Central account
 
-ThisBuild / developers := List(Developer(
-  id = "yourhandle", name = "Your Name",
-  email = "you@example.com", url = url("https://github.com/yourhandle"),
-))
+1. Create an account on [Maven Central](https://central.sonatype.com) to enable publishing, if you don't already have one.
+2. [Register](https://central.sonatype.com/publishing/namespaces) your namespace (e.g. `org.yourname`).
+   This should match the `organization` setting in [build.sbt](build.sbt).
+3. [Generate](https://central.sonatype.com/usertoken) a user token.
+   This will give you a username and password, which you can add as repository secrets (see below).
 
-ThisBuild / description := "What your library does."
-ThisBuild / homepage    := Some(url("https://github.com/yourorg/your-library"))
-```
+### 4. Generate a GPG key for signing releases
 
-Change the root project `name` and replace the sample source files.
-
-### 3. Set up Sonatype Central Portal
-
-1. Create an account at <https://central.sonatype.com>.
-2. Register your `groupId` namespace (e.g. `com.yourorg`).
-3. Generate a **User Token** (Account → Generate User Token).
-
-### 4. Generate a GPG key for signing
+Run the following on your local machine to generate a GPG key for signing releases.
 
 ```bash
+# Generate a new GPG key, making sure to note your passphrase:
 gpg --gen-key
-# Note the key ID printed, e.g. ABCDEF1234567890
 
-# Export the secret key as base64 (this becomes PGP_SECRET)
-gpg --armor --export-secret-keys ABCDEF1234567890 | base64 | pbcopy
+# Expose the secret key in base64:
+gpg --armor --export-secret-keys <PUBLIC_KEY> | base64
 
-# Upload the public key to a keyserver
-gpg --keyserver keyserver.ubuntu.com --send-keys ABCDEF1234567890
+# Upload the public key to a keyserver:
+gpg --keyserver keyserver.ubuntu.com --send-keys <PUBLIC_KEY>
 ```
 
-### 5. Add GitHub Actions secrets
+### 5. Add repository secrets
 
-Go to your repository → **Settings → Secrets and variables → Actions** and add:
+Add the following secrets to your repository on GitHub
+(**Settings → Secrets and variables → Actions**):
 
-| Secret | Value |
-|--------|-------|
-| `PGP_SECRET` | Base64-encoded GPG private key (from step 4) |
-| `PGP_PASSPHRASE` | Passphrase used when generating the GPG key |
-| `SONATYPE_USERNAME` | Sonatype Central Portal token username |
-| `SONATYPE_PASSWORD` | Sonatype Central Portal token password |
+| Secret                    | Value                                                                                                                                        |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `SONATYPE_USERNAME`       | Username from Maven user token in step 3.                                                                                                    |
+| `SONATYPE_PASSWORD`       | Password from Maven user token in step 3.                                                                                                    |
+| `PGP_SECRET`              | Base64-encoded GPG private key from step 4.                                                                                                  |
+| `PGP_PASSPHRASE`          | Passphrase used when generating the GPG key in step 4.                                                                                       |
+| `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository.                          |
+| `CLAUDE_CODE_OAUTH_TOKEN` | [API key](https://platform.claude.com/settings/keys) from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional). |
+
 
 ### 6. Publishing workflow
 
-| Event | Result |
-|-------|--------|
-| Push to `main` (any commit) | Publishes a `-SNAPSHOT` to Sonatype |
-| Push a tag matching `v*` | Publishes a release to Maven Central |
+Releases are automatically published to Maven Central when you push a tag with a version formatted as `v*` (e.g. `v1.2.3`).
 
-To release version `1.2.3`:
+#### Example:
+
+To release version `1.2.3`,
 
 ```bash
 git tag v1.2.3
 git push origin v1.2.3
 ```
 
-The CI pipeline will run tests, then publish and auto-promote the artifact to Maven Central.
-
 ## See also
 
-Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template for developing a full stack website in Scala.
+Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a full stack website in Scala.
