@@ -78,3 +78,7 @@ git push origin v1.2.3
 ```
 
 The CI pipeline will run tests, then publish and auto-promote the artifact to Maven Central.
+
+## See also
+
+Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template for developing a full stack website in Scala.
