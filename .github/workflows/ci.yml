@@ -1,0 +1,118 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+
+# Cancel in-progress runs when starting a new one.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  # ──────────────────────────────────────────────────────────
+  # Verify formatting, compile, and run tests
+  # ──────────────────────────────────────────────────────────
+  build-test:
+    name: Build Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+
+      - name: Checkout code
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Java
+        id: install-java
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: sbt
+
+      - name: Install SBT
+        id: install-sbt
+        uses: sbt/setup-sbt@v1
+
+      # Check format without modifying files. `continue-on-error` allows subsequent
+      # steps to inspect the outcome and apply a fix rather than stopping immediately.
+      - name: Check format
+        id: lint-check
+        run: sbt scalafmtCheckAll
+        continue-on-error: true
+
+      # Apply scalafmt in-place. Only runs when the check above found violations.
+      - name: Fix format
+        id: lint-fix
+        if: steps.lint-check.outcome == 'failure'
+        run: sbt scalafmtAll
+
+      # Commit and push the corrected files.
+      - name: Commit format fix
+        id: commit-fix
+        if: steps.lint-check.outcome == 'failure'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[fix][format] Fixed code format with scalafmt."
+
+      # Fail so that the build job does not run on this (pre-fix) commit.
+      - name: Restart after format fix
+        id: restart
+        if: steps.commit-fix.outputs.changes_detected == 'true'
+        run: |
+          echo "Format violations were found and automatically fixed."
+          exit 1
+
+      - name: Build and Test
+        id: build-test
+        run: sbt 'set ThisBuild / scalacOptions += "-Werror"' compile test
+
+
+  # ──────────────────────────────────────────────────────────
+  # Publish
+  #
+  # Triggered on:
+  #   • pushes to `main`  → publishes a -SNAPSHOT to Sonatype
+  #   • version tags (v*) → publishes a release to Maven Central
+  #
+  # Required repository secrets:
+  #   PGP_SECRET          – base64-encoded GPG private key
+  #   PGP_PASSPHRASE      – passphrase for the GPG key
+  #   SONATYPE_USERNAME   – Sonatype Central Portal token user
+  #   SONATYPE_PASSWORD   – Sonatype Central Portal token password
+  # ──────────────────────────────────────────────────────────
+  publish:
+    name: Publish
+    needs: [build-test]
+    if: >
+      github.event_name != 'pull_request' &&
+      (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: sbt
+
+      - name: Publish
+        run: sbt ci-release
+        env:
+          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

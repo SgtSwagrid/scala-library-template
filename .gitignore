@@ -1,0 +1,40 @@
+# JVM binaries:
+*.class
+/META-INF/
+
+# JVM logs:
+*.log
+hs_err_pid*
+
+# Binary output directories:
+target/
+.jvm/
+.js/
+
+# Build tools:
+/project/project
+.metals/
+.bsp/
+.bloop
+metals.sbt
+
+# Agents:
+.claude/settings.local.json
+.playwright-mcp/
+
+# IDEs:
+.idea/*
+.vscode/
+
+# Share IntelliJ code style, dictionaries, templates, and plugins:
+!.idea/codeStyles/
+!.idea/dictionaries/
+!.idea/fileTemplates/
+!.idea/inspectionProfiles/
+!.idea/runConfigurations/
+!.idea/externalDependencies.xml
+!.idea/file.template.settings.xml
+!.idea/misc.xml
+!.idea/scala_compiler.xml
+!.idea/scala_settings.xml
+!.idea/vcs.xml
