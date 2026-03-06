@@ -14,7 +14,7 @@ concurrency:
 jobs:
 
   # ──────────────────────────────────────────────────────────
-  # Verify formatting, compile, and run tests
+  # Verify code format and build integrity for every PR.
   # ──────────────────────────────────────────────────────────
   build-test:
     name: Build Test
@@ -78,11 +78,11 @@ jobs:
 
 
   # ──────────────────────────────────────────────────────────
-  # Publish
+  # Publish artefacts to Maven Central.
   #
   # Triggered on:
-  #   • pushes to `main`  → publishes a -SNAPSHOT to Sonatype
-  #   • version tags (v*) → publishes a release to Maven Central
+  #   • pushes to `main`  → publishes a snapshot.
+  #   • version tags (v*) → publishes a full release.
   #
   # Required repository secrets:
   #   PGP_SECRET          – base64-encoded GPG private key
@@ -99,15 +99,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        id: checkout
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-java@v4
+      - name: Install Java
+        id: install-java
+        uses: actions/setup-java@v4
         with:
-          distribution: temurin
           java-version: "21"
+          distribution: "temurin"
           cache: sbt
+
+      - name: Install SBT
+        id: install-sbt
+        uses: sbt/setup-sbt@v1
 
       - name: Publish
         run: sbt ci-release
