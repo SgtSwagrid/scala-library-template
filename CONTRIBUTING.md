@@ -35,7 +35,7 @@ A well-chosen abstraction (like `Vec` or `AffineBijection` or `Signal`) makes th
 This project follows simple [trunk-based](https://trunkbaseddevelopment.com/) development.
 All development happens on short-lived feature branches, which are merged into `main` when complete.
 Release branches are split from `main`.
-Releases are automatically published when [tagged](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags) with a version `v*`.
+Releases are automatically published when a new [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is published with a version tag `v*`.
 
 ## Contact
 
