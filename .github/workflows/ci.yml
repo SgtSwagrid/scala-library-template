@@ -1,10 +1,10 @@
 name: CI
 
 on:
-  push:
-    branches: ["**"]
-    tags: ["v*"]
   pull_request:
+    branches: [main]
+  push:
+    branches: [main]
 
 # Cancel in-progress runs when starting a new one.
 concurrency:
@@ -13,9 +13,7 @@ concurrency:
 
 jobs:
 
-  # ──────────────────────────────────────────────────────────
   # Verify code format and build integrity for every PR.
-  # ──────────────────────────────────────────────────────────
   build-test:
     name: Build Test
     runs-on: ubuntu-latest
@@ -75,53 +73,3 @@ jobs:
       - name: Build and Test
         id: build-test
         run: sbt 'set ThisBuild / scalacOptions += "-Werror"' compile test
-
-
-  # ──────────────────────────────────────────────────────────
-  # Publish artefacts to Maven Central.
-  #
-  # Triggered on:
-  #   • pushes to `main`  → publishes a snapshot.
-  #   • version tags (v*) → publishes a full release.
-  #
-  # Required repository secrets:
-  #   PGP_SECRET          – base64-encoded GPG private key
-  #   PGP_PASSPHRASE      – passphrase for the GPG key
-  #   SONATYPE_USERNAME   – Sonatype Central Portal token user
-  #   SONATYPE_PASSWORD   – Sonatype Central Portal token password
-  # ──────────────────────────────────────────────────────────
-  publish:
-    name: Publish
-    needs: [build-test]
-    if: >
-      github.event_name != 'pull_request' &&
-      (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        id: checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref || github.ref_name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install Java
-        id: install-java
-        uses: actions/setup-java@v4
-        with:
-          java-version: "21"
-          distribution: "temurin"
-          cache: sbt
-
-      - name: Install SBT
-        id: install-sbt
-        uses: sbt/setup-sbt@v1
-
-      - name: Publish
-        run: sbt ci-release
-        env:
-          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
-          PGP_SECRET: ${{ secrets.PGP_SECRET }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
