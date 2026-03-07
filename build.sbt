@@ -21,7 +21,7 @@ developers := List(
     email = "example@example.com",
     url = url("http://github.com/example")
   )
-),
+)
 
 // The URL for the GitHub repository of this library.
 ThisBuild / scmInfo := Some(ScmInfo(
