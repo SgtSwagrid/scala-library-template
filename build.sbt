@@ -14,15 +14,6 @@ ThisBuild / organization         := "org.example"
 ThisBuild / organizationName     := "Example"
 ThisBuild / organizationHomepage := Some(url("https://example.com"))
 
-developers := List(
-  Developer(
-    id = "example",
-    name = "Example Example",
-    email = "example@example.com",
-    url = url("http://github.com/example")
-  )
-)
-
 // The URL for the GitHub repository of this library.
 ThisBuild / scmInfo := Some(ScmInfo(
   url("https://github.com/SgtSwagrid/scala-library-template"),
@@ -32,6 +23,15 @@ ThisBuild / scmInfo := Some(ScmInfo(
 // The licence under which this library is released.
 ThisBuild / licenses :=
   List("MIT License" -> url("https://opensource.org/licenses/MIT"))
+
+ThisBuild / developers := List(
+  Developer(
+    id = "example",
+    name = "Example Example",
+    email = "example@example.com",
+    url = url("http://github.com/example")
+  )
+)
 
 ThisBuild / scalaVersion := "3.8.2"
 
