@@ -19,6 +19,10 @@ In particular, make sure to at least update the following fields:
 - `ThisBuild / oranizationName`: Your name or your organisation's name.
 - `ThisBuild / organizationHomepage`: A URL for your organisation (e.g. your personal website).
 - `ThisBuild / scmInfo`: The URL of your new GitHub repository.
+- `ThisBuild / licenses`: The license under while your library is released.
+- `ThisBuild / developers`: Details for the contributors to this project.
+- Also change the name of the main subproject from `root` to the name of your library,
+  as this name is taken during deployment.
 
 ### 3. Set up your Maven Central account
 
