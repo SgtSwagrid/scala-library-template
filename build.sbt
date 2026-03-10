@@ -2,7 +2,7 @@ import IdeSettings.packagePrefix
 import sbt._
 import sbt.Keys._
 
-// Basic details about this library:
+// Basic details about this library.
 ThisBuild / name        := "scala-library-template"
 ThisBuild / description := "A reusable template for Scala libraries."
 
