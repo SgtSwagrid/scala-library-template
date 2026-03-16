@@ -70,6 +70,10 @@ jobs:
           echo "Format violations were found and automatically fixed."
           exit 1
 
-      - name: Build and Test
+      - name: Build
         id: build-test
-        run: sbt 'set ThisBuild / scalacOptions += "-Werror"' compile test
+        run: sbt 'set ThisBuild / scalacOptions += "-Werror"' compile
+
+      - name: Test
+        id: test
+        run: sbt test
