@@ -13,7 +13,6 @@ Click '**Use this template**' on GitHub, and follow the instructions to create a
 Replace every `example` placeholder with real values for your project.
 In particular, make sure to at least update the following fields:
 
-- `ThisBuild / name`: The name of your library.
 - `ThisBuild / description`: A short description of your library.
 - `ThisBuild / organization`: The namespace for your library, which should match your namespace on Maven Central (see step 3 below).
 - `ThisBuild / oranizationName`: Your name or your organisation's name.
@@ -21,9 +20,9 @@ In particular, make sure to at least update the following fields:
 - `ThisBuild / scmInfo`: The URL of your new GitHub repository.
 - `ThisBuild / licenses`: The license under while your library is released.
   At the same time, update `LICENSE.md` to match.
-- `ThisBuild / developers`: Details for the contributors to this project.
-- Also change the name of the main subproject from `root` to the name of your library,
-  as this name is taken during deployment.
+- `ThisBuild / developers`: The developers who contribute to this library.
+- `root / name`: The name with which your library is published on Maven Central.
+- `root / packagePrefix`: The default package prefix in IntelliJ. Should generally match `ThisBuild / organization` or `{ThisBuild / organization}.{root / name}`.
 
 ### 3. Set up your Maven Central account
 
