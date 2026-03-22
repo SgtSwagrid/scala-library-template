@@ -57,8 +57,8 @@ Add the following secrets to your repository on GitHub
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | `SONATYPE_USERNAME`       | Username from Maven user token in step 3.                                                                                                    |
 | `SONATYPE_PASSWORD`       | Password from Maven user token in step 3.                                                                                                    |
-| `PGP_SECRET`              | Base64-encoded GPG private key from step 4.                                                                                                  |
-| `PGP_PASSPHRASE`          | Passphrase used when generating the GPG key in step 4.                                                                                       |
+| `PGP_SECRET`              | Base64-encoded PGP private key from step 4.                                                                                                  |
+| `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in step 4.                                                                                       |
 | `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository.                          |
 | `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional). |
 
