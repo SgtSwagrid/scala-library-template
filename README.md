@@ -1,4 +1,4 @@
-# scala-library-template
+# 📚 scala-library-template
 
 A reusable template for Scala libraries, with automatic [Maven Central](https://central.sonatype.com/) deployment.
 
