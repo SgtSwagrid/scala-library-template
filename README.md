@@ -33,7 +33,7 @@ In particular, make sure to at least update the following fields:
 3. [Generate](https://central.sonatype.com/usertoken) a user token.
    This will give you a username and password, which you can add as repository secrets (see below).
 
-### 4. Generate a GPG key for signing releases
+### 4. Generate a PGP key for signing releases
 
 Run the following on your local machine to generate a GPG key for signing releases.
 
