@@ -34,6 +34,7 @@ It is not intended for human eyes.
 - Write very short methods (ideally 1-3 lines) that do one thing, and compose them together. If a method is longer than 5 lines, consider breaking it up.
 - Don't change interface semantics (e.g. by converting covariant or contravariant types into invariant ones) without asking, just because it fixes a problem.
   The user may which to find a different solution that preserves these semantics.
+- Prefer inheritance with `-Ops`-style traits and F-bounded polymorphism, rather than type classes, when possible.
 
 ### Syntax
 
