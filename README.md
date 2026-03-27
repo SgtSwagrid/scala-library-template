@@ -34,7 +34,7 @@ In particular, make sure to at least update the following fields:
 
 ### 4. Generate a PGP key for signing releases
 
-Run the following on your local machine to generate a GPG key for signing releases.
+Run the following on your local machine to generate a PGP key for signing releases.
 
 ```bash
 # Generate a new GPG key, making sure to note your passphrase:
