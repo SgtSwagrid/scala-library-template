@@ -7,7 +7,7 @@
 ### 1. Create your repository
 
 Click [**here**](https://github.com/new?template_name=scala-library-template&template_owner=SgtSwagrid) (or '**Use this template**' on GitHub), and follow the instructions to create a new repository for your library.
-All files here will be copied as-is.
+All files herein will be copied as-is.
 
 ### 2. Configure [build.sbt](build.sbt) and [release.sbt](release.sbt)
 
