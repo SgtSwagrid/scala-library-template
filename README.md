@@ -1,6 +1,7 @@
-<h1 align="center">📚 Scala Library Template</h1>
-
-<p align="center">A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
+<div align="center">
+  <h1>📚 Scala Library Template</h1>
+  <p>A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
+</div>
 
 ## 📋 What's included?
 
@@ -112,19 +113,18 @@ Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website
 <h3 align="center">⬆️ Delete • Keep ⬇️</h3>
 <br/><br/><br/><br/>
 
-<h1 align="center">⚙️ My Library</h1>
+<div align="center">
 
-<p align="center">A very cool Scala library that does something great.</p>
-
-<!-- Update the following URLS to show live build status in your README. -->
-<p align="center">
-  <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml" style="text-decoration:none;">
-    <img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg" alt="Build status" />
-  </a>
-  <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3" style="text-decoration:none;">
-    <img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" />
-  </a>
-</p>
+  <h1>⚙️ My Library</h1>
+  <p>A very cool Scala library that does something great.</p>
+  
+  <!-- Update the following URLS to show live build status in your README. -->
+  <span>
+    <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg" alt="Build status" /></a>
+    <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" /></a>
+  </span>
+  
+</div>
 
 ## 📢 Publishing workflow
 
