@@ -2,6 +2,12 @@
 
 <p align="center">A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
 
+## What's included?
+
+1. Everything from [`SgtSwagrid/scala-config`](https://github.com/SgtSwagrid/scala-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
+2. Automatic deployment to Maven Central using [`sbt-ci-release`](https://github.com/sbt/sbt-ci-release).
+3. Example build configuration and setup instructions.
+
 ## How to use this template
 
 ### 1. Create your repository
@@ -12,7 +18,7 @@ All files herein will be copied as-is.
 ### 2. Configure [build.sbt](build.sbt) and [release.sbt](release.sbt)
 
 Replace every placeholder with real values for your project.
-The sbt settings necessary for publishing are defined by [sbt-ci-release](https://github.com/sbt/sbt-ci-release) and are documented [here](https://github.com/sbt/sbt-ci-release?tab=readme-ov-file#sbt).
+The sbt settings necessary for publishing are defined by `sbt-ci-release` and are documented [here](https://github.com/sbt/sbt-ci-release?tab=readme-ov-file#sbt).
 
 #### Settings to update in `release.sbt`:
 
@@ -95,7 +101,7 @@ In particular, and contra `LICENSE.md`, you may remove the license text from cop
 
 ## See also
 
-Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
+Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
 
 <br/><br/><br/><br/>
 <h3 align="center">⬆️ Delete • Keep ⬇️</h3>
@@ -107,7 +113,7 @@ Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-t
 
 ## Publishing workflow
 
-GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
+GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [`sbt-dynver`](https://github.com/sbt/sbt-dynver).
 
 ### Example
 
