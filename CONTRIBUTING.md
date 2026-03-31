@@ -6,14 +6,14 @@
 2. Create a feature branch: `git checkout -b feature_<description>`.
 3. Make your changes and format: `sbt scalafmtAll`
 4. Commit (`git add -A` then `git commit -m "<description>"`) and push (`git push`).
-5. Create a pull request to `main`, with the title given as `[<type>][<scope>] <Description>`, e.g. `[fix][render] Solved inverted colours.`
+5. Create a pull request to `main`, with the title given as `[<scope>] <Description>`, e.g. `[rendering] Solved inverted colours.`
 6. Before merging, the code must pass the build test (defined in [ci.yml](./.github/workflows/ci.yml)).
 
 ## Code Style
 
 Code formatting is determined by scalafmt. You shouldn't worry about aligning things in a pretty manner, scalafmt will do this for you.
 The formatting rules can be found in [.scalafmt.conf](./.scalafmt.conf).
-In general, we follow a Scala 3 style with significant indentation.
+We follow a Scala 3 style with significant indentation.
 
 ### Functional Programming
 
@@ -23,7 +23,7 @@ In general, this project follows a [functional](https://en.wikipedia.org/wiki/Fu
 - Use of pure functions without [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), or with _explicit_ side effects where unavoidable.
 - Very consistent and explicit use of [types](https://shekhar14.medium.com/type-theory-and-functional-programming-52f81deb36f1).
 
-When performance constraints necessitate the use of mutable state in a limited context, this is allowed.
+When performance constraints necessitate the use of mutable state in a limited scope, this is allowed.
 
 ### Mathematical Abstractions
 
@@ -35,7 +35,7 @@ A well-chosen abstraction (like `Vec` or `AffineBijection` or `Signal`) makes th
 This project follows simple [trunk-based](https://trunkbaseddevelopment.com/) development.
 All development happens on short-lived feature branches, which are merged into `main` when complete.
 Release branches are split from `main`.
-Releases are automatically published when a new [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is published with a version tag `v*`.
+Releases are automatically published when a new [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) is created.
 
 ## Contact
 
