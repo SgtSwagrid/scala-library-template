@@ -57,7 +57,7 @@ A division between build information and publishing information is introduced fo
 
 ### 4. Generate a PGP key for signing releases
 
-Execute the following on your local machine to generate a [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) key.
+Execute the following on your local machine to generate a [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) key:
 
 ```bash
 # Generate a new PGP key, making sure to remember your passphrase:
@@ -74,27 +74,42 @@ gpg --keyserver keyserver.ubuntu.com --send-keys <PUBLIC_KEY>
 
 Add the following secrets to your repository on GitHub, to allow publishing as part of an automated workflow:
 
-| Secret                    | Value                                                                                                                                        |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| `SONATYPE_USERNAME`       | Username from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                                                                                    |
-| `SONATYPE_PASSWORD`       | Password from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                                                                                    |
-| `PGP_SECRET`              | Base64-encoded PGP private key from [step 4](#4-generate-a-pgp-key-for-signing-releases).                                                                                                  |
-| `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in [step 4](#4-generate-a-pgp-key-for-signing-releases).                                                                                       |
-| `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository.                          |
-| `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional). |
+| Secret                    | Value                                                                                                               |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `SONATYPE_USERNAME`       | Username from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                   |
+| `SONATYPE_PASSWORD`       | Password from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                   |
+| `PGP_SECRET`              | Base64-encoded PGP private key from [step 4](#4-generate-a-pgp-key-for-signing-releases).                           |
+| `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in [step 4](#4-generate-a-pgp-key-for-signing-releases).                |
+| `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository. |
+| `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional).                     |
 
-Secrets can be added from the GitHub web interface by nagivating as follows:
+Secrets can be added from the GitHub web interface by nagivating as follows from your repository's page:
 
 > **Settings → Secrets and variables → Actions**
 
-### 6. Publishing workflow
+## License
 
-Releases are automatically published to Maven Central when you create a new release on GitHub.
-
-#### Example:
-
-To release version `1.2.3`, go to **Releases → Draft a new release** on GitHub, create a tag `v1.2.3`, and click **Publish release**.
+The included MIT license should be considered only as part of the template, and is not binding.
+This repository is hereby released to the public domain, to be used freely.
+In particular, and contra `LICENSE.md`, you may remove the license text from copies.
 
 ## See also
 
-Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a full stack website in Scala.
+Check out [scala-website-template](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
+
+<br/><br/><br/><br/>
+<h3 align="center">⬆️ Delete • Keep ⬇️</h3>
+<br/><br/><br/><br/>
+
+<h1 align="center">⚙️ My Library</h1>
+
+<p align="center">A very cool Scala library that does something great.</p>
+
+## Publishing workflow
+
+GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
+
+### Example
+
+To release version `1.2.3`, go to **Releases → Draft a new release**, create the tag `v1.2.3`, and click **Publish release**.
+Note the inclusion of `v` in the GitHub release name but not the resulting Maven version.
