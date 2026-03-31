@@ -30,7 +30,7 @@ The sbt settings necessary for publishing are defined by `sbt-ci-release` and ar
 | `organizationName` | Your organisation's name. | `No Hungry Dogs` |
 | `organizationHomepage` | Your organisation's website. | `nohungrydogs.org` |
 | [`versionScheme`](https://www.scala-sbt.org/1.x/docs/Publishing.html#Version+scheme) | What does the version number say about binary compatibility? | `strict` |
-| `licenses` | The license under which your library is released. Update [LICENSE.md](LICENSE.md) to match. | [`MIT`](https://opensource.org/license/mit) |
+| `licenses` | The license under which your library is released. Update [`LICENSE.md`](LICENSE.md) to match. | [`MIT`](https://opensource.org/license/mit) |
 | `scmInfo` | Your library's Git repository. | `https://github.com/no-hungry-dogs/dog-food-finder` |
 | `developers` | The individual developers who contribute to your library. | `SgtSwagrid` |
 
