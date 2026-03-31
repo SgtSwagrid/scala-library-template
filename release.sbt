@@ -1,6 +1,3 @@
-import sbt._
-import sbt.Keys._
-
 ThisBuild / name           := "Scala Library Template"
 ThisBuild / normalizedName := "scala-library-template"
 ThisBuild / description    := "A reusable template for Scala libraries."
