@@ -2,13 +2,13 @@
 
 <p align="center">A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
 
-## What's included?
+## 📋 What's included?
 
 1. Everything from [`SgtSwagrid/scala-config`](https://github.com/SgtSwagrid/scala-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
 2. Automatic deployment to Maven Central using [`sbt-ci-release`](https://github.com/sbt/sbt-ci-release).
 3. Example build configuration and setup instructions.
 
-## How to use this template
+## 🔨 How to use this template
 
 ### 1. Create your repository
 
@@ -93,13 +93,13 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 > **Settings → Secrets and variables → Actions**
 
-## License
+## 👮‍♂️ License
 
 The included MIT license should be considered only as part of the template, and is not binding.
 This repository is hereby released to the public domain, to be used freely.
 In particular, and contra `LICENSE.md`, you may remove the license text from copies.
 
-## See also
+## 👁️ See also
 
 Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
 
@@ -111,7 +111,7 @@ Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website
 
 <p align="center">A very cool Scala library that does something great.</p>
 
-## Publishing workflow
+## 📢 Publishing workflow
 
 GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [`sbt-dynver`](https://github.com/sbt/sbt-dynver).
 
