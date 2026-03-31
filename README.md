@@ -97,7 +97,12 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 The included MIT license should be considered only as part of the template, and is not binding.
 This repository is hereby released to the public domain, to be used freely.
-In particular, and contra `LICENSE.md`, you may remove the license text from copies.
+In particular, and contra [`LICENSE.md`](LICENSE.md), you may remove the license text from copies.
+
+## 🤝 Contributing
+
+[`CONTRIBUTING.md`](CONTRIBUTING.md) is also part of the template, and does not _necessarily_ apply to contributions to the template itself.
+The most important thing to know is that many of the configuration files are automatically synced from [`scala-config`](https://github.com/SgtSwagrid/scala-config), and should be updated there rather than here.
 
 ## 👁️ See also
 
