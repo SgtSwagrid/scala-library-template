@@ -1,4 +1,4 @@
-package com.example
+package io.github.sgtswagrid
 
 object Example:
 
