@@ -3,16 +3,18 @@ import sbt.Keys._
 
 ThisBuild / name           := "Scala Library Template"
 ThisBuild / normalizedName := "scala-library-template"
+ThisBuild / description    := "A reusable template for Scala libraries."
+ThisBuild / homepage       := Some(url("https://github.com/SgtSwagrid/scala-library-template"))
 
-ThisBuild / organization         := "org.example"
-ThisBuild / organizationName     := "Example"
-ThisBuild / organizationHomepage := Some(url("https://github.com/SgtSwagrid/scala-library-template"))
+ThisBuild / organization         := "io.github.sgtswagrid"
+ThisBuild / organizationName     := "SgtSwagrid"
+ThisBuild / organizationHomepage := Some(url("https://github.com/SgtSwagrid"))
 
 ThisBuild / scalaVersion  := "3.8.2"
 ThisBuild / versionScheme := Some("strict")
 
 ThisBuild / licenses :=
-  List("MIT License" -> url("https://opensource.org/licenses/MIT"))
+  List("MIT" -> url("https://opensource.org/licenses/MIT"))
 
 ThisBuild / scmInfo := Some(ScmInfo(
   url("https://github.com/SgtSwagrid/scala-library-template"),
@@ -21,10 +23,10 @@ ThisBuild / scmInfo := Some(ScmInfo(
 
 ThisBuild / developers := List(
   Developer(
-    id = "example",
-    name = "Example Example",
-    email = "example@example.com",
-    url = url("http://github.com/example")
+    id = "SgtSwagrid",
+    name = "Alec Dorrington",
+    email = "alecdorrington@gmail.com",
+    url = url("https://github.com/SgtSwagrid")
   )
 )
 
