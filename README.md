@@ -116,9 +116,15 @@ Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website
 
 <p align="center">A very cool Scala library that does something great.</p>
 
-<!-- Update the following URLS to show live build data in your README. -->
-[![Build status](https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg)](https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg)](https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3)
+<!-- Update the following URLS to show live build status in your README. -->
+<p align="center">
+  <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml">
+    <img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg" alt="Build status" />
+  </a>
+  <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3">
+    <img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" />
+  </a>
+</p>
 
 ## 📢 Publishing workflow
 
