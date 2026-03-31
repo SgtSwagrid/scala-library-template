@@ -1,4 +1,4 @@
-package com.example
+package io.github.sgtswagrid
 
 class ExampleSuite extends munit.FunSuite:
 
