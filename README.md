@@ -116,6 +116,10 @@ Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website
 
 <p align="center">A very cool Scala library that does something great.</p>
 
+<!-- Update the following URLS to show live build data in your README. -->
+[![Build status](https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg)](https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg)](https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3)
+
 ## 📢 Publishing workflow
 
 GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [`sbt-dynver`](https://github.com/sbt/sbt-dynver).
