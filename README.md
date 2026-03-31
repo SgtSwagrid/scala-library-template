@@ -2,7 +2,6 @@
   <h1>📚 Scala Library Template</h1>
   <p>A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
 </div>
-<br/>
 
 ## 📋 What's included?
 
