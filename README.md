@@ -120,7 +120,7 @@ Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website
   
   <!-- Update the following URLS to show live build status in your README. -->
   <span>
-    <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml/badge.svg" alt="Build status" /></a>
+    <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/ci.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml/badge.svg" alt="Build status" /></a>
     <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" /></a>
   </span>
   
