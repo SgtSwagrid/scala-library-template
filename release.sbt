@@ -9,7 +9,6 @@ ThisBuild / organization         := "io.github.sgtswagrid"
 ThisBuild / organizationName     := "SgtSwagrid"
 ThisBuild / organizationHomepage := Some(url("https://github.com/SgtSwagrid"))
 
-ThisBuild / scalaVersion  := "3.8.3"
 ThisBuild / versionScheme := Some("strict")
 
 ThisBuild / licenses :=
