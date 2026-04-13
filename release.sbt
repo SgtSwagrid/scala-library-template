@@ -1,4 +1,4 @@
-ThisBuild / description    := "A reusable template for Scala libraries."
+ThisBuild / description := "A reusable template for Scala libraries."
 
 ThisBuild / homepage :=
   Some(url("https://github.com/SgtSwagrid/scala-library-template"))
