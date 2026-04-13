@@ -1,5 +1,3 @@
-ThisBuild / name           := "Scala Library Template"
-ThisBuild / normalizedName := "scala-library-template"
 ThisBuild / description    := "A reusable template for Scala libraries."
 
 ThisBuild / homepage :=
