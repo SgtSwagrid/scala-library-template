@@ -5,8 +5,8 @@
 
 ## 📋 What's included?
 
-1. Everything from [`SgtSwagrid/scala-config`](https://github.com/SgtSwagrid/scala-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
-2. Automatic deployment to Maven Central using [`sbt-ci-release`](https://github.com/sbt/sbt-ci-release).
+1. Everything from [Scala Config](https://github.com/SgtSwagrid/scala-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
+2. Automatic deployment to Maven Central using [sbt-ci-release](https://github.com/sbt/sbt-ci-release).
 3. Example build configuration and setup instructions.
 
 ## 🔨 How to use this template
