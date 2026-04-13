@@ -25,8 +25,6 @@ The sbt settings necessary for publishing are defined by `sbt-ci-release` and ar
 
 | Name | Purpose | Example |
 | ---- | ------- | ------- |
-| `name` | Your library's name (for people). | `Dog Food Finder`
-| `normalizedName` | Your library's name (for robots). | `dog-food-finder` |
 | `organization` | Your organisation's package namespace. | `org.nohungrydogs` |
 | `organizationName` | Your organisation's name. | `No Hungry Dogs` |
 | `organizationHomepage` | Your organisation's website. | `nohungrydogs.org` |
