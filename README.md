@@ -102,12 +102,12 @@ In particular, and contra [`LICENSE.md`](LICENSE.md), you may remove the license
 
 ## 🤝 Contributing
 
-[`CONTRIBUTING.md`](CONTRIBUTING.md) is also part of the template, and does not _necessarily_ apply to contributions to the template itself.
-The most important thing to know is that many of the configuration files are automatically synced from [`scala-config`](https://github.com/SgtSwagrid/scala-config), and should be updated there rather than here.
+[CONTRIBUTING.md](CONTRIBUTING.md) is also part of the template, and does not _necessarily_ apply to contributions to the template itself.
+The most important thing to know is that many of the configuration files are automatically synced from [Scala Config](https://github.com/SgtSwagrid/scala-config), and should be updated there rather than here.
 
 ## 👁️ See also
 
-Check out [`scala-website-template`](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
+Check out [Scala Website Template](https://github.com/SgtSwagrid/scala-website-template) for a similar template to quickly start a new full stack website in Scala.
 
 <br/><br/><br/><br/>
 <h3 align="center">⬆️ Delete • Keep ⬇️</h3>
@@ -137,7 +137,7 @@ libraryDependencies += "io.github.sgtswagrid" %% "scala-library-template" % "0.1
 
 ## 📢 Publishing workflow
 
-GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [`sbt-dynver`](https://github.com/sbt/sbt-dynver).
+GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
 
 ### Example
 
