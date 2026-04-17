@@ -96,7 +96,7 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 The included MIT license should be considered only as part of the template, and is not binding.
 This repository is hereby released to the public domain, to be used freely.
-In particular, and contra [`LICENSE.md`](LICENSE.md), you may remove the license text from copies.
+In particular, and contra [LICENSE.md](LICENSE.md), you may remove the license text from copies.
 
 ## 🤝 Contributing
 
