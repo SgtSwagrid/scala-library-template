@@ -14,7 +14,7 @@ ThisBuild / licenses :=
 
 ThisBuild / scmInfo := Some(ScmInfo(
   url("https://github.com/SgtSwagrid/scala-library-template"),
-  "scm:git@github.com:SgtSwagrid/scala-library-template.git",
+  "scm:git@github.com/SgtSwagrid/scala-library-template.git",
 ))
 
 ThisBuild / developers := List(Developer(
