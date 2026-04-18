@@ -1,11 +1,9 @@
-ThisBuild / name           := "Scala Library Template"
-ThisBuild / normalizedName := "scala-library-template"
-ThisBuild / description    := "A reusable template for Scala libraries."
+ThisBuild / description := "A reusable template for Scala libraries."
 
 ThisBuild / homepage :=
   Some(url("https://github.com/SgtSwagrid/scala-library-template"))
 
-ThisBuild / organization         := "io.github.sgtswagrid"
+ThisBuild / organization         := "com.alecdorrington"
 ThisBuild / organizationName     := "SgtSwagrid"
 ThisBuild / organizationHomepage := Some(url("https://github.com/SgtSwagrid"))
 
@@ -16,7 +14,7 @@ ThisBuild / licenses :=
 
 ThisBuild / scmInfo := Some(ScmInfo(
   url("https://github.com/SgtSwagrid/scala-library-template"),
-  "scm:git@github.com:SgtSwagrid/scala-library-template.git",
+  "scm:git@github.com/SgtSwagrid/scala-library-template.git",
 ))
 
 ThisBuild / developers := List(Developer(

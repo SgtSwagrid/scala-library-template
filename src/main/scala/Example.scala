@@ -1,4 +1,4 @@
-package io.github.sgtswagrid
+package com.alecdorrington
 
 object Example:
 

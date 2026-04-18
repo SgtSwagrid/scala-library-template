@@ -25,8 +25,6 @@ The sbt settings necessary for publishing are defined by `sbt-ci-release` and ar
 
 | Name | Purpose | Example |
 | ---- | ------- | ------- |
-| `name` | Your library's name (for people). | `Dog Food Finder`
-| `normalizedName` | Your library's name (for robots). | `dog-food-finder` |
 | `organization` | Your organisation's package namespace. | `org.nohungrydogs` |
 | `organizationName` | Your organisation's name. | `No Hungry Dogs` |
 | `organizationHomepage` | Your organisation's website. | `nohungrydogs.org` |
@@ -94,11 +92,22 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 > **Settings → Secrets and variables → Actions**
 
+### 6. Publish the Scaladoc documentation with Github Pages
+
+This project is configured to automatically extract and publish all [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html) content
+as a stand-alone website using [GitHub Pages](https://pages.github.com/).
+
+All you need to do is configure GitHub to deploy the site from the branch named `gh-pages`,
+which will be automatically created following the first release.
+You can find this setting under:
+
+> **Settings → Pages**
+
 ## 👮‍♂️ License
 
 The included MIT license should be considered only as part of the template, and is not binding.
 This repository is hereby released to the public domain, to be used freely.
-In particular, and contra [`LICENSE.md`](LICENSE.md), you may remove the license text from copies.
+In particular, and contra [LICENSE.md](LICENSE.md), you may remove the license text from copies.
 
 ## 🤝 Contributing
 
@@ -122,7 +131,7 @@ The most important thing to know is that many of the configuration files are aut
   <!-- Update the following URLS to show live build status in your README. -->
   <span>
     <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml/badge.svg" alt="Build status" /></a>
-    <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" /></a>
+    <a href="https://search.maven.org/artifact/com.alecdorrington/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/com.alecdorrington/scala-library-template_3.svg" alt="Maven Central" /></a>
   </span>
   
 </div>
@@ -133,7 +142,7 @@ Add the following dependency to your `build.sbt`:
 
 <!-- Replace with the details for your own library. -->
 ```scala
-libraryDependencies += "io.github.sgtswagrid" %% "scala-library-template" % "0.1.0"
+libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.2.0"
 ```
 
 ## 📢 Publishing workflow
@@ -144,3 +153,7 @@ GitHub releases are automatically published to [Maven Central](https://central.s
 
 To release version `1.2.3`, go to **Releases → Draft a new release**, create the tag `v1.2.3`, and click **Publish release**.
 Note the inclusion of `v` in the GitHub release name but not the resulting Maven version.
+
+## 👁️ See also
+
+- This library was made using [Scala Library Template](https://github.com/SgtSwagrid/scala-library-template).
