@@ -145,15 +145,6 @@ Add the following dependency to your `build.sbt`:
 libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.2.0"
 ```
 
-## 📢 Publishing workflow
-
-GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
-
-### Example
-
-To release version `1.2.3`, go to **Releases → Draft a new release**, create the tag `v1.2.3`, and click **Publish release**.
-Note the inclusion of `v` in the GitHub release name but not the resulting Maven version.
-
 ## 👁️ See also
 
 - This library was made using [Scala Library Template](https://github.com/SgtSwagrid/scala-library-template).
