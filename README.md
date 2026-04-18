@@ -131,7 +131,7 @@ The most important thing to know is that many of the configuration files are aut
   <!-- Update the following URLS to show live build status in your README. -->
   <span>
     <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml/badge.svg" alt="Build status" /></a>
-    <a href="https://search.maven.org/artifact/io.github.sgtswagrid/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/io.github.sgtswagrid/scala-library-template_3.svg" alt="Maven Central" /></a>
+    <a href="https://search.maven.org/artifact/com.alecdorrington/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/com.alecdorrington/scala-library-template_3.svg" alt="Maven Central" /></a>
   </span>
   
 </div>
@@ -142,7 +142,7 @@ Add the following dependency to your `build.sbt`:
 
 <!-- Replace with the details for your own library. -->
 ```scala
-libraryDependencies += "io.github.sgtswagrid" %% "scala-library-template" % "0.1.0"
+libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.1.0"
 ```
 
 ## 📢 Publishing workflow
