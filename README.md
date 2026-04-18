@@ -87,6 +87,7 @@ Add the following secrets to your repository on GitHub, to allow publishing as p
 | `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in [step 4](#4-generate-a-pgp-key-for-signing-releases).                |
 | `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository. |
 | `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional).                     |
+| `CNAME`                   | The [CNAME](https://en.wikipedia.org/wiki/CNAME) address at which your documentation should be published.           | 
 
 Secrets can be added from the GitHub web interface by nagivating as follows from your repository's page:
 
