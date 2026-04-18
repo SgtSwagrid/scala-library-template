@@ -142,7 +142,7 @@ Add the following dependency to your `build.sbt`:
 
 <!-- Replace with the details for your own library. -->
 ```scala
-libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.1.0"
+libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.2.0"
 ```
 
 ## 📢 Publishing workflow
