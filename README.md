@@ -92,6 +92,17 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 > **Settings → Secrets and variables → Actions**
 
+### 6. Enable GitHub pages to publish the documentation.
+
+This project is configured to automatically extract and publish all [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html) content
+as a stand-alone website using [GitHub Pages](https://pages.github.com/).
+
+All you need to do is configure GitHub to deploy the site from the branch named `gh-pages`,
+which will be automatically created following the first release.
+You can find this setting under:
+
+> **Settings → Pages**
+
 ## 👮‍♂️ License
 
 The included MIT license should be considered only as part of the template, and is not binding.
