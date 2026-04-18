@@ -92,7 +92,7 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 
 > **Settings → Secrets and variables → Actions**
 
-### 6. Enable GitHub pages to publish the documentation.
+### 6. Publish the Scaladoc documentation with Github Pages
 
 This project is configured to automatically extract and publish all [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html) content
 as a stand-alone website using [GitHub Pages](https://pages.github.com/).
