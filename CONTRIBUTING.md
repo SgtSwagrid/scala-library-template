@@ -29,7 +29,7 @@ and there are no separate release branches.
 
 ## 📢 Publishing workflow
 
-GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [`sbt-dynver`](https://github.com/sbt/sbt-dynver).
+GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
 
 ### Example
 
