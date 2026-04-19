@@ -3,6 +3,12 @@
   <p>A reusable template for Scala libraries deployed to <a href="https://central.sonatype.com/">Maven Central</a>.</p>
 </div>
 
+<br><br>
+
+> "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away." — Antoine de Saint-Exupéry.
+
+<br>
+
 ## 📋 What's included?
 
 1. Everything from [Scala Library Config](https://github.com/SgtSwagrid/scala-library-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
