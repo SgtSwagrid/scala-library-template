@@ -125,7 +125,7 @@ The most important thing to know is that many of the configuration files are aut
 
 <div align="center">
 
-  <h1>⚙️ My Library</h1>
+  <h1>✨ My Library</h1>
   <p>A very cool Scala library that does something great.</p>
   
   <!-- Update the following URLS to show live build status in your README. -->
