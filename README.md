@@ -1,6 +1,6 @@
 <div align="center">
   <h1>📚 Scala Library Template</h1>
-  <p>A reusable template for Scala libraries, with automatic <a href="https://central.sonatype.com/">Maven Central</a> deployment.</p>
+  <p>A reusable template for Scala libraries deployed to <a href="https://central.sonatype.com/">Maven Central</a>.</p>
 </div>
 
 ## 📋 What's included?
