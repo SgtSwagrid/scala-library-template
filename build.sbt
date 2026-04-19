@@ -15,7 +15,9 @@ scalacOptions ++= Seq(
   "-language:experimental.erasedDefinitions",
 )
 
-lazy val `scala-library-template` = (project in file(".")).settings(
-  packagePrefix       := "com.alecdorrington",
-  libraryDependencies += "org.scalameta" %% "munit" % "1.3.0" % Test,
-)
+lazy val `scala-library-template` = project
+  .in(file(".")
+  .settings(
+    packagePrefix       := "com.alecdorrington",
+    libraryDependencies += "org.scalameta" %% "munit" % "1.3.0" % Test,
+  )
