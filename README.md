@@ -132,6 +132,7 @@ The most important thing to know is that many of the configuration files are aut
   <span>
     <a href="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml"><img src="https://github.com/SgtSwagrid/scala-library-template/actions/workflows/build-integrity.yml/badge.svg" alt="Build status" /></a>
     <a href="https://search.maven.org/artifact/com.alecdorrington/scala-library-template_3"><img src="https://img.shields.io/maven-central/v/com.alecdorrington/scala-library-template_3.svg" alt="Maven Central" /></a>
+    <a href="https://alecdorrington.com/scala-library-template"><img src="https://img.shields.io/badge/docs-latest-blue.svg" alt="Documentation" /></a>
   </span>
   
 </div>
