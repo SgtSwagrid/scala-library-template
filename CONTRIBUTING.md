@@ -27,7 +27,7 @@ All work happens on short-lived feature branches, which are merged into `main` b
 Releases are by [tag](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags),
 and there are no separate release branches.
 
-## 📢 Publishing workflow
+## 📢 Publishing Workflow
 
 GitHub releases are automatically published to [Maven Central](https://central.sonatype.com/) upon creation, using [sbt-dynver](https://github.com/sbt/sbt-dynver).
 
