@@ -16,7 +16,7 @@ scalacOptions ++= Seq(
 )
 
 lazy val `scala-library-template` = project
-  .in(file(".")
+  .in(file("."))
   .settings(
     packagePrefix       := "com.alecdorrington",
     libraryDependencies += "org.scalameta" %% "munit" % "1.3.0" % Test,
