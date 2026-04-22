@@ -1,7 +1,7 @@
 ThisBuild / description := "A reusable template for Scala libraries."
 
 ThisBuild / homepage :=
-  Some(url("https://github.com/SgtSwagrid/scala-library-template"))
+  Some(url("https://alecdorrington.com/scala-library-template"))
 
 ThisBuild / organization         := "com.alecdorrington"
 ThisBuild / organizationName     := "SgtSwagrid"
