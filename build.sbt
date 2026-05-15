@@ -10,11 +10,6 @@ scalacOptions ++= Seq(
   "-explain",
   "-explain-types",
   "-explain-cyclic",
-  "-language:experimental.subCases",
-  "-language:experimental.relaxedLambdaSyntax",
-  "-language:experimental.multiSpreads",
-  "-language:experimental.strictEqualityPatternMatching",
-  "-language:experimental.erasedDefinitions",
 )
 
 lazy val `scala-library-template` = project
