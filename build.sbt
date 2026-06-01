@@ -17,7 +17,7 @@ lazy val `scala-library-template` = project
   .enablePlugins(ScalaUnidocPlugin)
   .settings(
     packagePrefix                          := "com.alecdorrington",
-    libraryDependencies += "org.scalameta" %% "munit" % "1.3.0" % Test,
+    libraryDependencies += "org.scalameta" %% "munit" % "1.3.1" % Test,
     ScalaUnidoc / unidoc / scalacOptions ++=
       Seq("-project", "Scala Library Template"),
   )
