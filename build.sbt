@@ -18,6 +18,10 @@ lazy val `scala-library-template` = project
   .settings(
     packagePrefix                          := "com.alecdorrington",
     libraryDependencies += "org.scalameta" %% "munit" % "1.3.3" % Test,
+
+    // Workaround for an sbt 2.0.x classloader bug where in-process test runs
+    // can't see Test-scoped dependencies (NoClassDefFoundError: munit/FunSuite).
+    Test / fork := true,
     ScalaUnidoc / unidoc / scalacOptions ++=
       Seq("-project", "Scala Library Template"),
   )
