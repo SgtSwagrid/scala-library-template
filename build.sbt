@@ -4,7 +4,7 @@ import sbt.Keys._
 import sbtunidoc.BaseUnidocPlugin.autoImport.*
 import sbtunidoc.ScalaUnidocPlugin
 
-ThisBuild / scalaVersion := "3.8.4"
+ThisBuild / scalaVersion := "3.9.0"
 
 scalacOptions ++= Seq(
   "-explain",
@@ -17,7 +17,7 @@ lazy val `scala-library-template` = project
   .enablePlugins(ScalaUnidocPlugin)
   .settings(
     packagePrefix                          := "com.alecdorrington",
-    libraryDependencies += "org.scalameta" %% "munit" % "1.3.3" % Test,
+    libraryDependencies += "org.scalameta" %% "munit" % "1.3.6" % Test,
 
     // Workaround for an sbt 2.0.x classloader bug where in-process test runs
     // can't see Test-scoped dependencies (NoClassDefFoundError: munit/FunSuite).
