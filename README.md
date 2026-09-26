@@ -93,7 +93,7 @@ Add the following secrets to your repository on GitHub, to allow publishing as p
 | `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository. |
 | `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional).                     |
 
-Secrets can be added from the GitHub web interface by nagivating as follows from your repository's page:
+Secrets can be added from the GitHub web interface by navigating as follows from your repository's page:
 
 > **Settings → Secrets and variables → Actions**
 
@@ -102,7 +102,7 @@ Secrets can be added from the GitHub web interface by nagivating as follows from
 This project is configured to automatically extract and publish all [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html) content
 as a stand-alone website using [GitHub Pages](https://pages.github.com/).
 
-All you need to do is configure GitHub to deploy the site from the branch named `gh-pages`,
+All you need to do is configure GitHub to deploy the site from the branch named `docs`,
 which will be automatically created following the first release.
 You can find this setting under:
 
