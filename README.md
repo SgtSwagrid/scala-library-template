@@ -11,7 +11,7 @@
 
 ## 📋 What's included?
 
-1. Everything from [Scala Library Config](https://github.com/SgtSwagrid/scala-library-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI piplines for build integrity, and some IDE config.
+1. Everything from [Scala Library Config](https://github.com/SgtSwagrid/scala-library-config), including reasonable [Scalafmt](https://scalameta.org/scalafmt/) settings, CI pipelines for build integrity, and some IDE config.
 2. Automatic deployment to Maven Central using [sbt-ci-release](https://github.com/sbt/sbt-ci-release).
 3. Example build configuration and setup instructions.
 
@@ -31,6 +31,8 @@ The sbt settings necessary for publishing are defined by `sbt-ci-release` and ar
 
 | Name | Purpose | Example |
 | ---- | ------- | ------- |
+| `description` | A one-sentence summary of your library, published to Maven Central. | `Finds food for hungry dogs.` |
+| `homepage` | Your library's website, such as its Scaladoc site from [step 6](#6-publish-the-scaladoc-documentation-with-github-pages). | `nohungrydogs.org/dog-food-finder` |
 | `organization` | Your organisation's package namespace. | `org.nohungrydogs` |
 | `organizationName` | Your organisation's name. | `No Hungry Dogs` |
 | `organizationHomepage` | Your organisation's website. | `nohungrydogs.org` |
@@ -44,6 +46,7 @@ The sbt settings necessary for publishing are defined by `sbt-ci-release` and ar
 | ---- | ------- | ------- |
 | `packagePrefix` | IntelliJ's implicit package prefix for all code files. | `org.nohungrydogs` |
 | Name of subproject (following `lazy val`) | Your library's name, or the name of a particular module. | `dog-food-finder` |
+| Scaladoc title (`-project` in `ScalaUnidoc / unidoc / scalacOptions`) | The title of your library's Scaladoc site. | `Dog Food Finder` |
 
 #### Multiple modules
 
@@ -84,20 +87,20 @@ gpg --keyserver keyserver.ubuntu.com --send-keys <PUBLIC_KEY>
 
 Add the following secrets to your repository on GitHub, to allow publishing as part of an automated workflow:
 
-| Secret                    | Value                                                                                                               |
-|---------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `SONATYPE_USERNAME`       | Username from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                   |
-| `SONATYPE_PASSWORD`       | Password from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                   |
-| `PGP_SECRET`              | Base64-encoded PGP private key from [step 4](#4-generate-a-pgp-key-for-signing-releases).                           |
-| `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in [step 4](#4-generate-a-pgp-key-for-signing-releases).                |
-| `GH_TOKEN`                | Your GitHub [PAT](https://github.com/settings/personal-access-tokens) with administrator to access your repository. |
-| `CLAUDE_CODE_OAUTH_TOKEN` | API key from [Claude](https://claude.com/product/claude-code) for agentic workflows (optional).                     |
+| Secret                    | Value                                                                                                                                                               |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `SONATYPE_USERNAME`       | Username from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                                                                   |
+| `SONATYPE_PASSWORD`       | Password from Maven user token in [step 3](#3-set-up-your-maven-central-account).                                                                                   |
+| `PGP_SECRET`              | Base64-encoded PGP private key from [step 4](#4-generate-a-pgp-key-for-signing-releases).                                                                           |
+| `PGP_PASSPHRASE`          | Passphrase used when generating the PGP key in [step 4](#4-generate-a-pgp-key-for-signing-releases).                                                                |
+| `GH_TOKEN`                | A GitHub [PAT](https://github.com/settings/personal-access-tokens) with read and write access to the contents, pull requests and administration of your repository. |
+| `CLAUDE_CODE_OAUTH_TOKEN` | OAuth token from `claude setup-token`, for [Claude Code](https://claude.com/product/claude-code) agentic workflows (optional).                                      |
 
 Secrets can be added from the GitHub web interface by navigating as follows from your repository's page:
 
 > **Settings → Secrets and variables → Actions**
 
-### 6. Publish the Scaladoc documentation with Github Pages
+### 6. Publish the Scaladoc documentation with GitHub Pages
 
 This project is configured to automatically extract and publish all [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html) content
 as a stand-alone website using [GitHub Pages](https://pages.github.com/).
@@ -117,7 +120,7 @@ In particular, and contra [LICENSE.md](LICENSE.md), you may remove the license t
 ## 🤝 Contributing
 
 [CONTRIBUTING.md](CONTRIBUTING.md) is also part of the template, and does not _necessarily_ apply to contributions to the template itself.
-The most important thing to know is that many of the configuration files are automatically synced from [Scala Config](https://github.com/SgtSwagrid/scala-config), and should be updated there rather than here.
+The most important thing to know is that many of the configuration files are automatically synced from [Scala Library Config](https://github.com/SgtSwagrid/scala-library-config), and should be updated there rather than here.
 
 ## 👁️ See also
 
