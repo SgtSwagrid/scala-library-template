@@ -4,8 +4,8 @@ ThisBuild / homepage :=
   Some(uri("https://alecdorrington.com/scala-library-template"))
 
 ThisBuild / organization         := "com.alecdorrington"
-ThisBuild / organizationName     := "SgtSwagrid"
-ThisBuild / organizationHomepage := Some(uri("https://github.com/SgtSwagrid"))
+ThisBuild / organizationName     := "Alec Dorrington"
+ThisBuild / organizationHomepage := Some(uri("https://alecdorrington.com"))
 
 ThisBuild / versionScheme := Some("strict")
 
