@@ -145,13 +145,17 @@ The most important thing to know is that many of the configuration files are aut
   
 </div>
 
+> [!WARNING]
+> My Library is still a prototype. Anything could be broken or change between minor versions.
+
 ## ⬇️ Installation
 
-Add the following dependency to your `build.sbt`:
+The following applies for [Scala 3](https://www.scala-lang.org/) projects built with [sbt 2](https://www.scala-sbt.org/).
+Add the library to your `build.sbt` file, with the desired version number (e.g. [latest](../../releases/latest)):
 
 <!-- Replace with the details for your own library. -->
 ```scala
-libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "0.2.1"
+libraryDependencies += "com.alecdorrington" %% "scala-library-template" % "{version}"
 ```
 
 ## 👁️ See also
